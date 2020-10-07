@@ -3,7 +3,7 @@ import { Category } from './shared/category';
 import { CategoriesService } from './shared/categories.service';
 import { JwtAdminAuthGuard } from 'src/auth/shared/admin/jwt-admin-auth.guard';
 
-//@UseGuards(JwtAdminAuthGuard)
+@UseGuards(JwtAdminAuthGuard)
 @Controller('categories')
 export class CategoriesController {
 

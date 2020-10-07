@@ -9,7 +9,7 @@ export class AuthAdminController {
         private authService: AuthService
     ) { }
 
-    //@UseGuards(LocalAdminAuthGuard)
+    @UseGuards(LocalAdminAuthGuard)
     @Post('login')
     async login(@Request() req: any) {
         return this.authService.login(req.user);

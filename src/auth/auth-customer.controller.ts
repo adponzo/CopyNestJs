@@ -9,7 +9,7 @@ export class AuthCustomerController {
         private authService: AuthService
     ) { }
 
-    //@UseGuards(LocalCustomerAuthGuard)
+    @UseGuards(LocalCustomerAuthGuard)
     @Post('login')
     async login(@Request() req: any) {
         return this.authService.login(req.user);
